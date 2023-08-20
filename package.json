@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "node-console-colors": "^1.1.5"
+  },
+  "name": "bj",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "bj": "node index"
+  },
+  "keywords": [],
+  "author": "Evgenii",
+  "license": "ISC",
+  "description": "node, blackJack"
+}
