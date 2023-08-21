@@ -2,8 +2,8 @@
 
 ## Install:
 
-npm install
+`#0969DA` npm install
 
 ## Usage:
 
-node insex.js
+`#0969DA` node insex.js
