@@ -23,10 +23,8 @@ const casinoStep = casino => {
  * @returns {bulean} - the casino has no bust
  */
 const casinoDeal = (casino, player) => {
-  while ( casinoStep(casino) ) {
-    casino.push( getNewCard() );
-    getWinner('stop', casino, player);
-  }
+  while ( casinoStep(casino) ) casino.push( getNewCard() );
+  getWinner('stop', casino, player);
   return !bust(casino);
 }
 
