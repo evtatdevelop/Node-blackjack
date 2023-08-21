@@ -1,6 +1,14 @@
+/** @module results */
+
 const stat = require("./stat");
 const { getCardSum, bust, showCards } = require("./cardDeck")
 
+/**
+ * Show results of game
+ * @param {string} winer - geme result 
+ * @param {Array} casino - casino card set
+ * @param {Array} player - player card set
+ */
 const showResults = (winer, casino, player) => {
   console.log('\n');
   switch ( winer ) {
@@ -21,8 +29,16 @@ const showResults = (winer, casino, player) => {
   showCards(casino)
 }
 
+/** flag of showing of result */
 let showEwsult = false;
 
+/**
+ * Getting of game result
+ * @param {string} action - stage of game (stop / more) 
+ * @param {Array} casino - casino card set
+ * @param {Array} player - player card set
+ * @returns {null, string} - geme result
+ */
 const getWinner = (action, casino, player) => {
   let winer = null;
   let bst = false;

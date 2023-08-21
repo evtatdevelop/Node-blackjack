@@ -8,11 +8,14 @@ const rl = readline.Interface({
   output: process.stdout
 });
 
+/** casino card set */
 const casino = [];
+/** player card set */
 const player = [];
 
 console.log('let\'s play.. [y/n] ♣ ♠ ♥ ♦');
 
+/** main logic of game */
 rl.on('line', line => {
   switch ( line ) {
     case 'y': case 'Y':      

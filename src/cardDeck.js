@@ -1,7 +1,14 @@
+/** @module CardDeck */
 
 const cc = require("node-console-colors");
 
+/** set of taken cards */
 const takenCards = new Set();
+
+/**
+ * getting new card
+ * @returns {string} Code of card (Exapmple: 'SA' - ace of spades)
+ */
 const getNewCard = () => {
   const cards = [2,3,4,5,6,7,8,9,10,'J','Q','K',"A"];
   const cardSuits = ['S', 'C', 'D', 'H']; // ['spades', 'clubs', 'diamonds', 'hearts']
@@ -11,16 +18,35 @@ const getNewCard = () => {
   return newCard;
 }
 
+/**
+ * Determination of card weight
+ * @param {string} card - Code of card
+ * @returns {number} - card weight
+ */
 const getCardWeight = card => {
   const jqka = {'J': 2, 'Q': 3, 'K': 4, 'A': 11};
   const cardWeight = card.slice(1);
   return !isNaN(cardWeight) ? +cardWeight : jqka[cardWeight];
 }
 
+/**
+ * Getting sum of player cards
+ * @param {Array} player - Array of player card
+ * @returns {number} - sum of player cards
+ */
 const getCardSum = player => player.reduce((sum, cur) => sum = sum + getCardWeight(cur), 0)
 
+/**
+ * Detection that a player has too many cards
+ * @param {Array} player - Array of player card
+ * @returns {bulean} - ('true' - too much)
+ */
 const bust = player => getCardSum(player) > 21
 
+/**
+ * Show player cards
+ * @param {Array} player - Array of player card 
+ */
 const showCards = player => { 
   const color = {'S': 'fg_black', 'C': 'fg_black', 'D': 'fg_red', 'H': 'fg_red'};
   const simbol = {'S': '♠', 'C': '♣', 'D': '♦', 'H': '♥'};

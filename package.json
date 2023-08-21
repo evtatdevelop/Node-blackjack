@@ -1,7 +1,4 @@
 {
-  "dependencies": {
-    "node-console-colors": "^1.1.5"
-  },
   "name": "bj",
   "version": "1.0.0",
   "main": "index.js",
@@ -9,7 +6,10 @@
     "bj": "node index"
   },
   "keywords": [],
-  "author": "Evgenii",
+  "author": "Evgenii <tatarenkoe@gmail.com>",
   "license": "ISC",
-  "description": "node, blackJack"
+  "description": "node, blackJack",
+  "dependencies": {
+    "node-console-colors": "^1.1.5"
+  }
 }
