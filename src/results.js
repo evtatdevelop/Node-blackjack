@@ -11,17 +11,19 @@ const { getCardSum, bust, showCards } = require("./cardDeck");
  */
 const showResults = (winer, casino, player) => {
   console.log('\n');
+  let msg = '';
   switch ( winer ) {
-    case 'casino':  console.log(`Casino winner`);
+    case 'casino': msg = `Casino winner`;
       stat('casino'); break;
-    case 'player': console.log(`You are a winner`);
+    case 'player': msg = `You are a winner`;
       stat('player'); break;
-    case 'bust player': console.log(`\nYou have too much. Casino winner`);
+    case 'bust player': msg = `You have too much. Casino winner`;
       stat('casino'); break;
-    case 'bust casino': console.log(`\nOverkill at the casino. You are a winner`);
+    case 'bust casino': msg = `Overkill at the casino. You are a winner`;
       stat('player'); break;
-    case 'draw': console.log(`Draw`);                
-  } 
+    case 'draw': msg = `Draw`;
+  }
+  console.log(`\n${msg}`);
   showEwsult = true;
   console.log(`You: ${getCardSum(player)}:`);
   showCards(player);
