@@ -17,4 +17,4 @@ const stat = winer => fs.exists('./blackJack.json', exists => {
   })
 })
 
-module.exports = stat
+module.exports = stat;

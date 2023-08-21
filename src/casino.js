@@ -1,7 +1,7 @@
 /** @module casino */
 
 const {getNewCard, getCardSum, bust} = require("./cardDeck");
-const getWinner = require("./results")
+const getWinner = require("./results");
 
 /** flag of casino in game */
 let csinoInDeal = true;
@@ -27,10 +27,7 @@ const casinoDeal = (casino, player) => {
     casino.push( getNewCard() );
     getWinner('stop', casino, player);
   }
-  return !bust(casino)
+  return !bust(casino);
 }
 
-module.exports = {
-  casinoStep,
-  casinoDeal
-}
+module.exports = {casinoStep, casinoDeal, }

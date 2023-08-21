@@ -1,6 +1,6 @@
 const readline = require('readline');
 const { casinoStep, casinoDeal } = require("./src/casino");
-const { getNewCard, showCards } = require("./src/cardDeck")
+const { getNewCard, showCards } = require("./src/cardDeck");
 const getWinner = require("./src/results");
 
 const rl = readline.Interface({

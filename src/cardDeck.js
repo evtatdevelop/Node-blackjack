@@ -34,14 +34,14 @@ const getCardWeight = card => {
  * @param {Array} player - Array of player card
  * @returns {number} - sum of player cards
  */
-const getCardSum = player => player.reduce((sum, cur) => sum = sum + getCardWeight(cur), 0)
+const getCardSum = player => player.reduce((sum, cur) => sum = sum + getCardWeight(cur), 0);
 
 /**
  * Detection that a player has too many cards
  * @param {Array} player - Array of player card
  * @returns {bulean} - ('true' - too much)
  */
-const bust = player => getCardSum(player) > 21
+const bust = player => getCardSum(player) > 21;
 
 /**
  * Show player cards
@@ -57,4 +57,4 @@ const showCards = player => {
   console.log(cardBody);
 }
 
-module.exports = {getNewCard, getCardSum, bust, showCards}
+module.exports = {getNewCard, getCardSum, bust, showCards, }

@@ -1,7 +1,7 @@
 /** @module results */
 
 const stat = require("./stat");
-const { getCardSum, bust, showCards } = require("./cardDeck")
+const { getCardSum, bust, showCards } = require("./cardDeck");
 
 /**
  * Show results of game
@@ -24,9 +24,9 @@ const showResults = (winer, casino, player) => {
   } 
   showEwsult = true;
   console.log(`You: ${getCardSum(player)}:`);
-  showCards(player)
+  showCards(player);
   console.log(`Casino: ${getCardSum(casino)}:`);
-  showCards(casino)
+  showCards(casino);
 }
 
 /** flag of showing of result */
@@ -56,10 +56,10 @@ const getWinner = (action, casino, player) => {
     const playerRate = getCardSum(player);
     if ( casinoRate > playerRate ) winer = 'casino'
     else if ( casinoRate < playerRate ) winer = 'player'  
-    else winer = 'draw'    
+    else winer = 'draw';
   }
   if ( winer && !showEwsult ) showResults(winer, casino, player);
   return winer;
 }
 
-module.exports = getWinner
+module.exports = getWinner;
