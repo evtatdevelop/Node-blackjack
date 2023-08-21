@@ -2,6 +2,8 @@
 
 ## Install:
 
+This app use [node-console-colors](https://github.com/damien-otis/node-console-colors).
+
 ```sh
 npm install
 ```
@@ -9,5 +11,5 @@ npm install
 ## Usage:
 
 ```sh
-node insex.js
+node index.js
 ```
