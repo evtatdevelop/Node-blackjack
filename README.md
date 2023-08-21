@@ -1,9 +1,13 @@
-# node-blackjack
+# node-blackjack terminal app
 
 ## Install:
 
-`#0969DA` npm install
+```sh
+npm install
+```
 
 ## Usage:
 
-`#0969DA` node insex.js
+```sh
+node insex.js
+```
